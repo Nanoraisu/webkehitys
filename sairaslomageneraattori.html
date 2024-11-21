@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sairaslomageneraattori</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sairaslomageneraattori</h1>
+    </header>
+    <main>
+        <p>Paina nappia saadaksesi satunnaisen sairaslomatodistuksen tekstin.</p>
+        <button id="generateButton">Luo sairaslomateksti</button>
+        <p id="output" style="margin-top: 20px; font-weight: bold;"></p>
+    </main>
+    <footer>
+        <a href="index.html">Takaisin etusivulle</a>
+    </footer>
+    <script>
+        const texts = [
+            "Potilas on työkyvytön influenssan vuoksi seuraavat kolme päivää. Lisätietoja löydät <a href='https://www.terveyskirjasto.fi/dlk00570/influenssa?q=influenssa' target='_blank'>influenssasta</a>.",
+            "Potilaalla diagnosoitu selkäkipu, ja hän tarvitsee lepoa viiden päivän ajan. Lue lisää <a href='https://www.terveyskirjasto.fi/dlk00326/selkakipu?q=selk%C3%A4kipu' target='_blank'>selkäkivusta</a>.",
+            "Potilas on määrätty sairauslomalle stressiperäisen uupumuksen takia, kestoltaan yksi viikko. Lisätietoja löydät <a href='https://www.terveyskirjasto.fi/dlk00976/stressi?q=stressi' target='_blank'>stressistä</a>.",
+            "Potilas tarvitsee sairauslomaa vatsataudin vuoksi, kaksi päivää. Lue lisää <a href='https://www.terveyskirjasto.fi/dlk00059/vatsatauti-ja-ripuli?q=vatsatauti' target='_blank'>vatsataudista</a>.",
+            "Potilas on sairauslomalla migreenikohtauksen vuoksi, kolme päivää. Tietoa löydät <a href='https://www.terveyskirjasto.fi/dlk00047/migreeni?q=migreeni' target='_blank'>migreenistä</a>.",
+            "Potilas oli Australiassa lomalla ja tämän niskaan tippui <a href='https://en.wikipedia.org/wiki/Drop_bear' target='blank'>australialainen tippuva karhu</a>. Potilas sairaslomalla kolme viikkoa hyökkäyksestä toipumiseen.",
+            "Potilaalla on akuutti lorvikatarri ja tarvitsee yhden päivän sairaslomaa. Lisätietoa lorvikatarrista <a href='https://fi.wiktionary.org/wiki/lorvikatarri' target='blank'></a>"
+        ];
+
+        document.getElementById('generateButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * texts.length);
+            document.getElementById('output').innerHTML = texts[randomIndex];
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+"Potilas oli Australiassa lomalla ja tämän niskaan tippui <a href='https://en.wikipedia.org/wiki/Drop_bear' target='blank'>australialainen tippuva karhu</a>. Potilas sairaslomalla kolme viikkoa hyökkäyksestä toipumiseen."
